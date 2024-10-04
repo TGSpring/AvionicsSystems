@@ -1,0 +1,9 @@
+# ninja log v5
+5	9	0	clean	8c45b54705a541e8
+13	803	7497690187975001	CMakeFiles/AvionicsSystems.dir/AvionicsSystems.cpp.obj	97138b105b3b774d
+1074	1456	7497695884478104	AvionicsSystems.exe	2770b22acc030668
+12	947	7497687877916128	CMakeFiles/AvionicsSystems.dir/GPSsim.cpp.obj	ab3b6a8d381065db
+10	48	7497687868953589	CMakeFiles/AvionicsSystems.dir/FlightControl.cpp.obj	1a709d925d41df98
+16	269	7497687871166185	CMakeFiles/AvionicsSystems.dir/WeatherSim.cpp.obj	c6ec2409642d8ed3
+14	269	7497687871166185	CMakeFiles/AvionicsSystems.dir/SensorSim.cpp.obj	820a4ca18da3e24e
+9	1073	7497695883561167	CMakeFiles/AvionicsSystems.dir/UserInterface.cpp.obj	7f5728acee569788

@@ -1,0 +1,90 @@
+Package: vcpkg-cmake
+Version: 2024-04-18
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 056a954bbe7b7d4d54f0b4c71e290c5e5d68e8d714e5204ea0e167f077c56867
+Status: install ok installed
+
+Package: zlib
+Version: 1.3.1
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3061d11a321b2d2ddf5a0a5c0b46831ce77768da8a51f671b7033209b642d783
+Description: A compression library
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a32293120f29197be2bd3bc94b34191d9a716edcba569a1d10aad6d27e613cd0
+Status: install ok installed
+
+Package: curl
+Version: 8.8.0
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 80f9627a2cfb0b30c660332b9e651df9b0b891603fabab428090023fd5d21dc0
+Description: A library for transferring data with URLs
+Default-Features: non-http, ssl
+Status: install ok installed
+
+Package: curl
+Feature: non-http
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enables protocols beyond HTTP/HTTPS/HTTP2
+Status: install ok installed
+
+Package: curl
+Feature: schannel
+Architecture: x64-windows
+Multi-Arch: same
+Description: SSL support (Secure Channel)
+Status: install ok installed
+
+Package: curl
+Feature: ssl
+Architecture: x64-windows
+Multi-Arch: same
+Description: Default SSL backend
+Status: install ok installed
+
+Package: curl
+Feature: sspi
+Architecture: x64-windows
+Multi-Arch: same
+Description: SSPI support
+Status: install ok installed
+
+Package: curlpp
+Version: 2018-06-15
+Port-Version: 9
+Depends: curl, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 75c59a6542fe1fd5d2961d55856324a1bfd23de90f9689f090ef49a7f6e8c0d3
+Description: C++ wrapper around libcURL
+Status: install ok installed
+
+Package: fmt
+Version: 10.2.1
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 047728c59213f5c50845b57550cefbccb31f7c78cfd54cf2b8792ad14abd6e6a
+Description: {fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.11.3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8991b965bf282dd4de2fd056d3b810ebaa1c2cee6180fbefd54f97bee51714a2
+Description: JSON for Modern C++
+Status: install ok installed
+

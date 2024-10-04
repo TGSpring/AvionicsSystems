@@ -1,0 +1,96 @@
+Log Type: Pitch
+Pitch: 2 degrees
+Roll: 0 degrees
+Yaw: 0 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Roll
+Pitch: 2 degrees
+Roll: 3 degrees
+Yaw: 0 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Yaw
+Pitch: 2 degrees
+Roll: 3 degrees
+Yaw: 4 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Sensor Data
+Pitch: 2 degrees
+Roll: 3 degrees
+Yaw: 4 degrees
+Altitude: 1000.47 ft
+Airspeed: 249.521 knots
+Orientation: -0.3287 degrees
+-------------------------
+Altitude: 1000.47 ft
+Airspeed: 249.521 knots
+Orientation: -0.3287 degrees
+Latitude: -9.25596e+61
+Longitude: -9.25596e+61
+GPS Altitude: -9.25596e+61 feet
+Temperature: -21.7677C
+Humidity: 38.9581%
+Wind Speed: 0.120496 m/s
+-------------------------
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+Latitude: -9.25596e+61
+Longitude: -9.25596e+61
+GPS Altitude: -9.25596e+61 feet
+Temperature: -1.70917C
+Humidity: 25.0442%
+Wind Speed: 9.73038 m/s
+-------------------------
+Log Type: Pitch
+Pitch: 2 degrees
+Roll: 0 degrees
+Yaw: 0 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Roll
+Pitch: 2 degrees
+Roll: 3 degrees
+Yaw: 0 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Sensor Data
+Pitch: 2 degrees
+Roll: 3 degrees
+Yaw: 0 degrees
+Altitude: 1000.45 ft
+Airspeed: 248.639 knots
+Orientation: 0.820831 degrees
+-------------------------
+Altitude: 1000.45 ft
+Airspeed: 248.639 knots
+Orientation: 0.820831 degrees
+Latitude: -9.25596e+61
+Longitude: -9.25596e+61
+GPS Altitude: -9.25596e+61 feet
+Temperature: 48.169C
+Humidity: 10.1196%
+Wind Speed: 5.86217 m/s
+-------------------------
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+Latitude: -9.25596e+61
+Longitude: -9.25596e+61
+GPS Altitude: -9.25596e+61 feet
+Temperature: -25.2142C
+Humidity: 36.8439%
+Wind Speed: 2.04201 m/s
+-------------------------

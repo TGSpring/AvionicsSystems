@@ -1,0 +1,11 @@
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/CMakeFiles/curlpp.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/CMakeFiles/edit_cache.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/CMakeFiles/list_install_components.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/CMakeFiles/install.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/CMakeFiles/install/local.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/extras/CMakeFiles/edit_cache.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/extras/CMakeFiles/rebuild_cache.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/extras/CMakeFiles/list_install_components.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/extras/CMakeFiles/install.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/blds/curlpp/x64-windows-dbg/extras/CMakeFiles/install/local.dir

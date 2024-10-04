@@ -1,0 +1,3 @@
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/CMakeFiles/AvionicsSystems.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/CMakeFiles/edit_cache.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/CMakeFiles/rebuild_cache.dir
