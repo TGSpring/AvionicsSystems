@@ -94,3 +94,55 @@ Temperature: -25.2142C
 Humidity: 36.8439%
 Wind Speed: 2.04201 m/s
 -------------------------
+Log Type: Pitch
+Pitch: 2313 degrees
+Roll: 0 degrees
+Yaw: 0 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Roll
+Pitch: 2313 degrees
+Roll: 234 degrees
+Yaw: 0 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Yaw
+Pitch: 2313 degrees
+Roll: 234 degrees
+Yaw: 342 degrees
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+-------------------------
+Log Type: Sensor Data
+Pitch: 2313 degrees
+Roll: 234 degrees
+Yaw: 342 degrees
+Altitude: 1001 ft
+Airspeed: 250.205 knots
+Orientation: -1.64858 degrees
+-------------------------
+Altitude: 1001 ft
+Airspeed: 250.205 knots
+Orientation: -1.64858 degrees
+Latitude: -9.25596e+61
+Longitude: -9.25596e+61
+GPS Altitude: -9.25596e+61 feet
+Temperature: 11.0584C
+Humidity: 24.3928%
+Wind Speed: 9.64478 m/s
+-------------------------
+Altitude: 1000 ft
+Airspeed: 250 knots
+Orientation: 0 degrees
+Latitude: -9.25596e+61
+Longitude: -9.25596e+61
+GPS Altitude: -9.25596e+61 feet
+Temperature: -1.482C
+Humidity: 18.2642%
+Wind Speed: 13.3216 m/s
+-------------------------

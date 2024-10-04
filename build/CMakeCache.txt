@@ -291,8 +291,35 @@ Z_VCPKG_PWSH_PATH:FILEPATH=Z_VCPKG_PWSH_PATH-NOTFOUND
 // triplet
 _VCPKG_INSTALLED_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed
 
+//The directory containing a CMake configuration file for bson-1.0.
+bson-1.0_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/bson-1.0
+
+//The directory containing a CMake configuration file for bsoncxx.
+bsoncxx_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/bsoncxx
+
+//The directory containing a CMake configuration file for curl.
+curl_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/curl
+
+//The directory containing a CMake configuration file for curlpp.
+curlpp_DIR:PATH=curlpp_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/fmt
+
+//The directory containing a CMake configuration file for mongo-cxx-driver.
+mongo-cxx-driver_DIR:PATH=mongo-cxx-driver_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for mongoc-1.0.
+mongoc-1.0_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/mongoc-1.0
+
+//The directory containing a CMake configuration file for mongocxx.
+mongocxx_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/mongocxx
+
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/nlohmann_json
+
+//The directory containing a CMake configuration file for unofficial-utf8proc.
+unofficial-utf8proc_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/unofficial-utf8proc
 
 
 ########################
@@ -367,6 +394,12 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
+//Have library pthreads
+CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
+//Have library pthread
+CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/tyler/source/repos/newAS/AvionicsSystems
@@ -441,8 +474,12 @@ CURL_LIBRARY_DEBUG:INTERNAL=C:/Users/tyler/source/repos/newAS/AvionicsSystems/bu
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //vcpkg
 CURL_LIBRARY_RELEASE:INTERNAL=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/lib/libcurl.lib
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/lib/zlib.lib;debug;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/debug/lib/zlibd.lib][C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/include][c ][v1.3.1(1)]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/lib/zlib.lib;debug;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/debug/lib/zlibd.lib][C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/include][c ][v1.3.1()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3()]
 //ADVANCED property for variable: VCPKG_VERBOSE
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_INCLUDE_DIR

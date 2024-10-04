@@ -5,7 +5,6 @@
 #include <cstdlib>
 #include <nlohmann/json.hpp>
 #include <algorithm>
-
 #undef max
 
 void UserInterface::fetchAndDisplayGPSData() {

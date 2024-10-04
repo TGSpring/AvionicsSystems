@@ -3,13 +3,13 @@
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "documentNamespace": "https://spdx.org/spdxdocs/curlpp-x64-windows-2018-06-15#9-350eed4c-f844-4992-8968-ffb5ea867c44",
-  "name": "curlpp:x64-windows@2018-06-15#9 75c59a6542fe1fd5d2961d55856324a1bfd23de90f9689f090ef49a7f6e8c0d3",
+  "documentNamespace": "https://spdx.org/spdxdocs/curlpp-x64-windows-2018-06-15#10-4b3658ec-6112-49ef-b573-cbbb299530b9",
+  "name": "curlpp:x64-windows@2018-06-15#10 e0222b4aae4ec7cafad56d6a18190fbca9ae2289dbf43f9ba72794fcab232765",
   "creationInfo": {
     "creators": [
       "Tool: vcpkg-2024-06-10-02590c430e4ed9215d27870138c2e579cc338772"
     ],
-    "created": "2024-10-04T17:53:33Z"
+    "created": "2024-10-11T17:36:56Z"
   },
   "relationships": [
     {
@@ -38,6 +38,11 @@
       "relatedSpdxElement": "SPDXRef-file-3"
     },
     {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-4"
+    },
+    {
       "spdxElementId": "SPDXRef-binary",
       "relationshipType": "GENERATED_FROM",
       "relatedSpdxElement": "SPDXRef-port"
@@ -61,14 +66,19 @@
       "spdxElementId": "SPDXRef-file-3",
       "relationshipType": "CONTAINED_BY",
       "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-4",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
     }
   ],
   "packages": [
     {
       "name": "curlpp",
       "SPDXID": "SPDXRef-port",
-      "versionInfo": "2018-06-15#9",
-      "downloadLocation": "git+https://github.com/microsoft/vcpkg@5f1ce1e78bf1fca65c8f47bde61824589bd11e5c",
+      "versionInfo": "2018-06-15#10",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@f0a72e60279d7929599cd47abf01c243d7ee0e69",
       "homepage": "https://github.com/jpbarrette/curlpp",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -79,7 +89,7 @@
     {
       "name": "curlpp:x64-windows",
       "SPDXID": "SPDXRef-binary",
-      "versionInfo": "75c59a6542fe1fd5d2961d55856324a1bfd23de90f9689f090ef49a7f6e8c0d3",
+      "versionInfo": "e0222b4aae4ec7cafad56d6a18190fbca9ae2289dbf43f9ba72794fcab232765",
       "downloadLocation": "NONE",
       "licenseConcluded": "MIT",
       "licenseDeclared": "NOASSERTION",
@@ -103,7 +113,7 @@
   ],
   "files": [
     {
-      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/5f1ce1e78bf1fca65c8f47bde61824589bd11e5c/fix-cmake.patch",
+      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/f0a72e60279d7929599cd47abf01c243d7ee0e69/fix-cmake.patch",
       "SPDXID": "SPDXRef-file-0",
       "checksums": [
         {
@@ -115,7 +125,7 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/5f1ce1e78bf1fca65c8f47bde61824589bd11e5c/fix-findzliberror.patch",
+      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/f0a72e60279d7929599cd47abf01c243d7ee0e69/fix-findzliberror.patch",
       "SPDXID": "SPDXRef-file-1",
       "checksums": [
         {
@@ -127,24 +137,36 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/5f1ce1e78bf1fca65c8f47bde61824589bd11e5c/portfile.cmake",
+      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/f0a72e60279d7929599cd47abf01c243d7ee0e69/obsolete-curlopt.diff",
       "SPDXID": "SPDXRef-file-2",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "3cedee58b6bb79696d3359674d6b5ddc738ce7d6519c5577edafcd49188afb16"
+          "checksumValue": "b5e328d3a025e99cddda8019233bed8990f419a2b094cf4a08c3e50429b984a6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/5f1ce1e78bf1fca65c8f47bde61824589bd11e5c/vcpkg.json",
+      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/f0a72e60279d7929599cd47abf01c243d7ee0e69/portfile.cmake",
       "SPDXID": "SPDXRef-file-3",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0d806a3e6c69ea0e264aed26f3a0ee8a9d3842203cf522ac4e74ecd03be1156d"
+          "checksumValue": "1a76b1517097bee163bf854b86bf751ad77aabf86d2ff2e6ede9f7d7b7214efa"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./C:/Users/tyler/AppData/Local/vcpkg/registries/git-trees/f0a72e60279d7929599cd47abf01c243d7ee0e69/vcpkg.json",
+      "SPDXID": "SPDXRef-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f4ecb70ffd29924ff3cc4941b99b1dbdb56eead26b8a734559a52f6361ced9b9"
         }
       ],
       "licenseConcluded": "NOASSERTION",

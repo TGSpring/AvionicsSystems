@@ -1,8 +1,8 @@
 Package: vcpkg-cmake
-Version: 2024-04-18
+Version: 2024-04-23
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 056a954bbe7b7d4d54f0b4c71e290c5e5d68e8d714e5204ea0e167f077c56867
+Abi: 935cf6c54047038dcafba17f074e0f684696170b07642b621ee6edf2a8280303
 Status: install ok installed
 
 Package: zlib
@@ -10,7 +10,7 @@ Version: 1.3.1
 Depends: vcpkg-cmake
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 3061d11a321b2d2ddf5a0a5c0b46831ce77768da8a51f671b7033209b642d783
+Abi: 05755f9a08e5c455aae6077e59a1694dababbf48dbecf189677ebca8676f9a76
 Description: A compression library
 Status: install ok installed
 
@@ -22,11 +22,11 @@ Abi: a32293120f29197be2bd3bc94b34191d9a716edcba569a1d10aad6d27e613cd0
 Status: install ok installed
 
 Package: curl
-Version: 8.8.0
+Version: 8.10.1
 Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 80f9627a2cfb0b30c660332b9e651df9b0b891603fabab428090023fd5d21dc0
+Abi: abbf59371e3900eb8169f7d12aba79326660efc019af845c7d4f3dc767cc1d3f
 Description: A library for transferring data with URLs
 Default-Features: non-http, ssl
 Status: install ok installed
@@ -61,30 +61,261 @@ Status: install ok installed
 
 Package: curlpp
 Version: 2018-06-15
-Port-Version: 9
+Port-Version: 10
 Depends: curl, vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 75c59a6542fe1fd5d2961d55856324a1bfd23de90f9689f090ef49a7f6e8c0d3
+Abi: e0222b4aae4ec7cafad56d6a18190fbca9ae2289dbf43f9ba72794fcab232765
 Description: C++ wrapper around libcURL
 Status: install ok installed
 
 Package: fmt
-Version: 10.2.1
-Port-Version: 2
+Version: 11.0.2
+Port-Version: 1
 Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 047728c59213f5c50845b57550cefbccb31f7c78cfd54cf2b8792ad14abd6e6a
+Abi: cf7f117f3d01664a65d2840b634bb417e78beef3cb467d4aeeef534eaef25efd
 Description: {fmt} is an open-source formatting library providing a fast and safe alternative to C stdio and C++ iostreams.
 Status: install ok installed
 
 Package: nlohmann-json
 Version: 3.11.3
+Port-Version: 1
 Depends: vcpkg-cmake, vcpkg-cmake-config
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 8991b965bf282dd4de2fd056d3b810ebaa1c2cee6180fbefd54f97bee51714a2
+Abi: bfe9a9e1c2e0980c5b7fdc5135f08b9d99ca9f7e4e0c5b4ebbb7d5e23a4528e7
 Description: JSON for Modern C++
 Status: install ok installed
+
+Package: libbson
+Version: 1.28.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fb1cf9531b91aceef41e1ae9cf8df5ff3cb08408fdfb3fc52733e43a17b5ea4e
+Description: libbson is a library providing useful routines related to building, parsing, and iterating BSON documents.
+Status: install ok installed
+
+Package: utf8proc
+Version: 2.9.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 27eedf04489b51d7ce6e0faffc3aebfbf2aef04368a020b4f85f9f66d61cc28c
+Description: Clean C library for processing UTF-8 Unicode data.
+Status: install ok installed
+
+Package: mongo-c-driver
+Version: 1.28.1
+Depends: libbson, utf8proc, vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 40a1b6c0963e50d637997e30a93ef19f6a4f54d66050be6c516580270134f7b4
+Description: Client library written in C for MongoDB.
+Status: install ok installed
+
+Package: cxxopts
+Version: 3.2.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: aee2627b8aaad3a83ee49362240f110d782ac18d144a385e419df5a5e0037dbd
+Description: This is a lightweight C++ option parser library, supporting the standard GNU style syntax for options
+Status: install ok installed
+
+Package: vcpkg-boost
+Version: 2024-05-15
+Architecture: x64-windows
+Multi-Arch: same
+Abi: de97df9b5a18241e5a01e6342d951b3fadf51f6c4e292e7dc367984b0315e4db
+Status: purge ok not-installed
+
+Package: boost-uninstall
+Version: 1.85.0
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a5a6ab7fd134bfa65eba015c0ad083af4130a466a542f9fbd58d264fd6ce3459
+Description: Internal vcpkg port used to uninstall Boost
+Status: purge ok not-installed
+
+Package: boost-cmake
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-uninstall, vcpkg-boost, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e6c231f3290e7e84fbc77cf7c53b28e8109f2ec814adef9c809f8806be554897
+Description: Boost CMake support infrastructure
+Status: purge ok not-installed
+
+Package: boost-headers
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6da9179bf6896f012440acc36375b2dd3688b1c7c76fbc19a769d53c04b00c02
+Description: Boost headers module
+Status: purge ok not-installed
+
+Package: boost-config
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 903eab695b5afb056b26e06ec8ea059df6ef67a68d469fa172a49c0f771ea91f
+Description: Boost config module
+Status: purge ok not-installed
+
+Package: boost-static-assert
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: cb80a647284e7f35b69854a358eaae3410babcc7119d89ea829ccbffa5843738
+Description: Boost static_assert module
+Status: purge ok not-installed
+
+Package: boost-type-traits
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers, boost-static-assert
+Architecture: x64-windows
+Multi-Arch: same
+Abi: efff7b23a51852fddcfba61415b2f61d9039ff859cc43853465dd82a11e5c5cb
+Description: Boost type_traits module
+Status: purge ok not-installed
+
+Package: boost-assert
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d396200e36ad170def8e34ef1b7314d5a33e2c19ec5d4d95af43c6bdea379188
+Description: Boost assert module
+Status: purge ok not-installed
+
+Package: boost-throw-exception
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6a73ddf6bc268d0e5f43fcd74e3bc783cc413a2dad053f0bf5b45b4491728e94
+Description: Boost throw_exception module
+Status: purge ok not-installed
+
+Package: boost-preprocessor
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: eb68524d4cd4f77d91499de66ce2158a6412a1ae49c17a779b0e3f2ce925113d
+Description: Boost preprocessor module
+Status: purge ok not-installed
+
+Package: boost-io
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d931211811df7d49a1f1e37fbc68590138a76faae26c9496b4ea2d9f5dc3ec9c
+Description: Boost io module
+Status: purge ok not-installed
+
+Package: boost-core
+Version: 1.85.0
+Port-Version: 2
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-static-assert, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 84a851970984573939fedc24ab00100155ab837609f61cdbfb98757d179b64f0
+Description: Boost core module
+Status: purge ok not-installed
+
+Package: boost-utility
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-io, boost-preprocessor, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6ac6fb13102aad6e8ab1943215f9278d0df96653579a75c8d6f30d8865cf129c
+Description: Boost utility module
+Status: purge ok not-installed
+
+Package: boost-move
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3562895ce46cf5fba26f6759a4d133087d30c66a638a02c4ee890bef519ebde0
+Description: Boost move module
+Status: purge ok not-installed
+
+Package: boost-smart-ptr
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-move, boost-static-assert, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6558f51741ec68f8e4f71366778deb752a59e99c24cb1f5020ffbebffdb77d51
+Description: Boost smart_ptr module
+Status: purge ok not-installed
+
+Package: boost-predef
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 19c12fe43480ba1fadc5ac9c1007735fed7850e8018d71b0b40bd9a5bd6362f1
+Description: Boost predef module
+Status: purge ok not-installed
+
+Package: boost-detail
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-core, boost-headers, boost-preprocessor, boost-static-assert, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a1b6aa0fec6cf0306ddec824fc0d64010f175c1f92cc703cb82d3a80e59b6eb3
+Description: Boost detail module
+Status: purge ok not-installed
+
+Package: boost-optional
+Version: 1.85.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-detail, boost-headers, boost-move, boost-predef, boost-static-assert, boost-throw-exception, boost-type-traits, boost-utility
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 30a60544330e03df0da7a84d86a91c4665fdd47bd38dc8e2df85550c3d4feb93
+Description: Boost optional module
+Status: purge ok not-installed
+
+Package: mongo-cxx-driver
+Version: 3.11.0
+Depends: libbson, mongo-c-driver, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8f4816551c23df7d2661a8d6692a270b513357f88ded4623e4b3b518374488ae
+Description: MongoDB C++ Driver.
+Status: install ok installed
+
+Package: mongo-cxx-driver
+Feature: boost
+Depends: boost-optional, boost-smart-ptr, boost-utility
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enables the Boost C++17 polyfill for bsoncxx.
+    Warning: This feature changes the ABI.
+Status: purge ok not-installed
 

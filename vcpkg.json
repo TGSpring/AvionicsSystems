@@ -2,10 +2,15 @@
   "dependencies": [
     "curl",
     "curlpp",
+    "cxxopts",
     "fmt",
+    "libbson",
+    "mongo-c-driver",
+    "nlohmann-json",
+    "utf8proc",
     "vcpkg-cmake",
     "vcpkg-cmake-config",
     "zlib",
-    "nlohmann-json"
+    "mongo-cxx-driver"
   ]
 }
