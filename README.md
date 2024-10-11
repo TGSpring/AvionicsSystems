@@ -1,51 +1,39 @@
-# Avionics Systems Simulation with Machine Learning and Real-Time Data Integration
+# Avionics System Simulation
 
-## Project Overview
+## Description
 
-The **Avionics Systems Simulation** is an advanced aircraft sensor simulation program designed to integrate machine learning, real-time GPS, and weather data for efficient flight monitoring and control. It simulates aircraft behavior using various sensor data, showcasing a combination of avionics simulation and artificial intelligence to predict and control aircraft performance.
+The **Avionics System Simulation** is an aircraft sensor simulation program designed to emulate various avionics functionalities. It integrates real-time GPS data using the OpenStreetMap API and incorporates machine learning algorithms to analyze and predict sensor data metrics.
 
-## Features
+### Current Features
 
-- **Real-time Data Integration**: Fetches live GPS data using the Overpass API and real-time weather data for accurate simulations.
-- **Sensor Simulation**: Simulates flight control, GPS, and weather sensors to replicate aircraft behavior.
-- **Machine Learning Integration**: A `run_ml_model.py` script that integrates machine learning to analyze sensor data for predictive analytics.
-- **Modular Architecture**: The system is modular, with separate components for flight control, GPS, weather simulation, and a user interface.
+- **Sensor Simulation**: Simulates various aircraft sensors to provide realistic data for analysis.
+- **Real-Time GPS Integration**: Utilizes the Overpass API to fetch real-time GPS data, enhancing the accuracy of the simulation.
+- **Weather Data Simulation**: Includes a module for simulating weather conditions affecting flight dynamics.
+- **Machine Learning Integration**: Employs a machine learning script that:
+  - Loads and preprocesses data from log files.
+  - Trains a linear regression model to predict sensor values.
+  - Visualizes the results and evaluates model performance.
 
-## Getting Started
+### Machine Learning Script
 
-### Prerequisites
+The existing machine learning script, `run_ml_model.py`, performs the following tasks:
 
-Before you can run the project, make sure you have the following installed:
+1. **Load Data**: Reads data from a specified log file.
+2. **Preprocess Data**: Cleans the data by removing null values and converting data types.
+3. **Train Model**: Trains a linear regression model using the preprocessed data.
+4. **Save Results**: Outputs the actual vs. predicted values to a CSV file.
+5. **Visualize Results**: Displays a scatter plot of the actual data and the regression line.
 
-1. **C++ Compiler** (e.g., GCC or MSVC)
-2. **Python** (for running the machine learning scripts)
-3. **vcpkg** (for managing dependencies)
-4. **CMake** (for building the project)
-
-### Build Instructions
+### Installation
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/AvionicsSystem.git
+   cd AvionicsSystem
+2. Install the necessary dependencies using vcpkg and Python's package manager:
+   ```bash
+   vcpkg install <dependencies>
+   pip install -r requirements.txt
 
-    ```bash
-    git clone https://github.com/your-username/AvionicsSystems.git
-    cd AvionicsSystems
-    ```
-
-2. **Install vcpkg:**  
-   For detailed instructions on how to install vcpkg and its usage, please refer to the official [vcpkg repository](https://github.com/microsoft/vcpkg).
-
-3. Build the project using `CMake`:
-
-    ```bash
-    mkdir build
-    cd build
-    cmake ..
-    cmake --build .
-    ```
-
-### Running the Program
-
-After building the project, you can run the executable to simulate the avionics system:
-
-```bash
-./AvionicsSystems
+### Usage
+The program operates through a numbered menu in a command line interface. Upon running the program, users will be presented with options to select various functionalities, such as starting the simulation, viewing results, or exiting the program. Simply enter the corresponding number for your choice and follow any additional prompts.
