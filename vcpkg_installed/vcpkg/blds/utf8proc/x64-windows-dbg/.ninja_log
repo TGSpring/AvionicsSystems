@@ -1,0 +1,5 @@
+# ninja log v5
+3	144	7503714436525475	CMakeFiles/utf8proc.dir/utf8proc.c.obj	8c4efbfb8241af00
+145	1976	7503714454673367	utf8proc.dll	b01ab89d9e4b66ce
+145	1976	7503714454673367	utf8proc.lib	b01ab89d9e4b66ce
+1976	2066	0	CMakeFiles/install.util	a8d76a8fb92b3b08

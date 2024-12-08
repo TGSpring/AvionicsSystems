@@ -1,0 +1,6 @@
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/include/utf8proc.h
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/lib/utf8proc.lib
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/bin/utf8proc.dll
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/share/unofficial-utf8proc/unofficial-utf8proc-config.cmake
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/share/unofficial-utf8proc/unofficial-utf8proc-config-release.cmake
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/lib/pkgconfig/libutf8proc.pc

@@ -1,0 +1,16 @@
+# ninja log v5
+16	355	7503714100662848	CMakeFiles/curlpp.dir/src/curlpp/OptionBase.cpp.obj	bf57270de550dd4f
+24	487	7503714101968479	CMakeFiles/curlpp.dir/src/curlpp/cURLpp.cpp.obj	4b944a52db47e01b
+6	502	7503714102117981	CMakeFiles/curlpp.dir/src/curlpp/Exception.cpp.obj	ad12f585c75c89a3
+9	619	7503714103294055	CMakeFiles/curlpp.dir/src/curlpp/Form.cpp.obj	af99687584349968
+35	655	7503714103632909	CMakeFiles/curlpp.dir/src/curlpp/internal/SList.cpp.obj	7d2836c6536dcab9
+21	660	7503714103722611	CMakeFiles/curlpp.dir/src/curlpp/Options.cpp.obj	1ed924db93634076
+32	661	7503714103712639	CMakeFiles/curlpp.dir/src/curlpp/internal/OptionSetter.cpp.obj	29a9fb5eb7e429e5
+29	662	7503714103742546	CMakeFiles/curlpp.dir/src/curlpp/internal/OptionList.cpp.obj	86027b9b94aea33f
+26	668	7503714103792372	CMakeFiles/curlpp.dir/src/curlpp/internal/CurlHandle.cpp.obj	3a840385c47ebca
+12	677	7503714103892056	CMakeFiles/curlpp.dir/src/curlpp/Info.cpp.obj	a11549c2ad9c79c2
+3	678	7503714103902019	CMakeFiles/curlpp.dir/src/curlpp/Easy.cpp.obj	81a3518488b716c6
+14	701	7503714104131236	CMakeFiles/curlpp.dir/src/curlpp/Multi.cpp.obj	cee051b3a1741317
+701	4160	7503714138536610	curlpp.dll	7321ddd8009f39b0
+701	4160	7503714138536610	curlpp.lib	7321ddd8009f39b0
+4160	4437	0	CMakeFiles/install.util	29b3a8e6cffbfb73

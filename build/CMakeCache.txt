@@ -294,6 +294,9 @@ _VCPKG_INSTALLED_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/buil
 //The directory containing a CMake configuration file for fmt.
 fmt_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/fmt
 
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/nlohmann_json
+
 
 ########################
 # INTERNAL cache entries
@@ -442,7 +445,9 @@ CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //vcpkg
 CURL_LIBRARY_RELEASE:INTERNAL=C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/lib/libcurl.lib
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/lib/zlib.lib;debug;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/debug/lib/zlibd.lib][C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/include][c ][v1.3.1(1)]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/lib/zlib.lib;debug;C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/debug/lib/zlibd.lib][C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/include][c ][v1.3.1()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3()]
 //ADVANCED property for variable: VCPKG_VERBOSE
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_INCLUDE_DIR

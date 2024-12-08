@@ -1,0 +1,5 @@
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/lib/cmake/cxxopts/cxxopts-config.cmake
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/lib/cmake/cxxopts/cxxopts-config-version.cmake
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/lib/cmake/cxxopts/cxxopts-targets.cmake
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/include/cxxopts.hpp
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/cxxopts_x64-windows/lib/pkgconfig/cxxopts.pc

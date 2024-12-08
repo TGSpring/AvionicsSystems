@@ -1,0 +1,10 @@
+prefix=C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows
+exec_prefix=C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/bin
+libdir=C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/lib
+includedir=C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/pkgs/utf8proc_x64-windows/include
+
+Name: libutf8proc
+Description: UTF8 processing
+Version: 2.9.0
+Libs: -L${libdir} -lutf8proc
+Cflags: -I${includedir} -DUTF8PROC_EXPORTS

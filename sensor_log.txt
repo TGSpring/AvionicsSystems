@@ -1,0 +1,4 @@
+Temperature:20
+Altitude:10000
+Speed:250
+Fuel:70

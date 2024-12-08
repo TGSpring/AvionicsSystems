@@ -1,0 +1,2 @@
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/blds/libbson/x64-windows-dbg/CMakeFiles/CheckCXX/CMakeFiles/edit_cache.dir
+C:/Users/tyler/source/repos/newAS/AvionicsSystems/vcpkg_installed/vcpkg/blds/libbson/x64-windows-dbg/CMakeFiles/CheckCXX/CMakeFiles/rebuild_cache.dir

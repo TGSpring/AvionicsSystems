@@ -1,0 +1,1 @@
+C:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\vcpkg\blds\mongo-cxx-driver\install-x64-windows-dbg-out.log
