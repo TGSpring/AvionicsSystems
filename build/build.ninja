@@ -103,6 +103,15 @@ build CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj: CXX_COMPILER__AvionicsS
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
   TARGET_PDB = AvionicsSystems.pdb
 
+build CMakeFiles\AvionicsSystems.dir\ASHash.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\ASHash.cpp || cmake_object_order_depends_target_AvionicsSystems
+  DEFINES = -DFMT_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
+  OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
+  TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
+  TARGET_PDB = AvionicsSystems.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target AvionicsSystems
@@ -111,7 +120,7 @@ build CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj: CXX_COMPILER__AvionicsS
 #############################################
 # Link the executable AvionicsSystems.exe
 
-build AvionicsSystems.exe: CXX_EXECUTABLE_LINKER__AvionicsSystems_Debug CMakeFiles\AvionicsSystems.dir\AvionicsSystems.cpp.obj CMakeFiles\AvionicsSystems.dir\UserInterface.cpp.obj CMakeFiles\AvionicsSystems.dir\FlightControl.cpp.obj CMakeFiles\AvionicsSystems.dir\GPSsim.cpp.obj CMakeFiles\AvionicsSystems.dir\SensorSim.cpp.obj CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj | vcpkg_installed\x64-windows\debug\lib\fmtd.lib vcpkg_installed\x64-windows\debug\lib\zlibd.lib vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib
+build AvionicsSystems.exe: CXX_EXECUTABLE_LINKER__AvionicsSystems_Debug CMakeFiles\AvionicsSystems.dir\AvionicsSystems.cpp.obj CMakeFiles\AvionicsSystems.dir\UserInterface.cpp.obj CMakeFiles\AvionicsSystems.dir\FlightControl.cpp.obj CMakeFiles\AvionicsSystems.dir\GPSsim.cpp.obj CMakeFiles\AvionicsSystems.dir\SensorSim.cpp.obj CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj CMakeFiles\AvionicsSystems.dir\ASHash.cpp.obj | vcpkg_installed\x64-windows\debug\lib\fmtd.lib vcpkg_installed\x64-windows\debug\lib\zlibd.lib vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\fmtd.lib  vcpkg_installed\x64-windows\debug\lib\zlibd.lib  vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

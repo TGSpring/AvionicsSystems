@@ -117,7 +117,8 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				7
 			]
 		}
 	],
@@ -174,14 +175,22 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				7
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				6
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				6
+				8
 			]
 		}
 	],
@@ -224,9 +233,20 @@
 			"sourceGroupIndex" : 0
 		},
 		{
+			"backtrace" : 2,
+			"path" : "ASHash.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "ASHash.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
 			"backtrace" : 3,
 			"path" : "build/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_json.natvis",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		}
 	],
 	"type" : "EXECUTABLE"

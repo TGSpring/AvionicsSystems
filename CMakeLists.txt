@@ -17,7 +17,7 @@ add_executable(AvionicsSystems
     GPSsim.cpp
     SensorSim.cpp
     WeatherSim.cpp
-)
+ "ASHash.h" "ASHash.cpp")
 
 # Link libraries
 target_link_libraries(AvionicsSystems PRIVATE

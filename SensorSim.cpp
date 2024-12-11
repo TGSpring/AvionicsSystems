@@ -1,4 +1,5 @@
 #include "SensorSim.h"
+#include "ASHash.h"
 #include <cstdlib> // For rand()
 #include <cmath> // For fmod()
 #include <random> // For random number generation
@@ -55,4 +56,10 @@ void SensorSim::updateSensor() {
     // Update orientation with Gaussian noise
     double orientation_change = uniform_dist(gen) + noise_dist(gen);
     orientation += orientation_change;
+}
+
+void SensorSim::logSensorData(ASHash& hashTable) const {
+    hashTable.insert("Altitude", getAltitude());
+    hashTable.insert("AirSpeed", getAirspeed());
+    hashTable.insert("Orientation", getOrientation());
 }

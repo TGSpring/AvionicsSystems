@@ -1,5 +1,5 @@
 #pragma once
-
+#include "ASHash.h"
 #include <random> // For random number generation
 
 class SensorSim {
@@ -10,6 +10,7 @@ public:
     double getAirspeed() const;
     double getOrientation() const;
     void updateSensor();
+    void logSensorData(ASHash& hashTable) const;
 
 private:
     double altitude;

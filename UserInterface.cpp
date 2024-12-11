@@ -44,8 +44,12 @@ void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, W
 // Functions corresponding to each menu option
 
 void UserInterface::logData(const FlightControl& fc, const SensorSim& ss, const std::string& logType) const {
-    std::cout << "Logging data of type: " << logType << "\n";
-    // Implementation for logging data...
+    static ASHash sensorData; //Persistent across function calls.
+    ss.logSensorData(sensorData);
+    std::cout << "Sensor data logged successfully.";
+    std::cout << "Current data:\n";
+    sensorData.display(); //Optional.
+   
 }
 
 double UserInterface::getValidAngle(const std::string& prompt) const {
