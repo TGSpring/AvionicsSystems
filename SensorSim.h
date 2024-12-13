@@ -6,9 +6,18 @@ class SensorSim {
 public:
     SensorSim();
 
+    //Accessor methods for ranges.
+    static double getMaxAltitude();
+    static double getMinAltitude();
+    static double getMaxAirspeed();
+    static double getMinAirspeed();
+
+
     double getAltitude() const;
     double getAirspeed() const;
     double getOrientation() const;
+
+
     void updateSensor();
     void logSensorData(ASHash& hashTable) const;
 

@@ -39,6 +39,25 @@ double SensorSim::getOrientation() const {
     return orientation;
 }
 
+//Accessor Methods
+double SensorSim::getMaxAltitude() {
+    return MAX_ALTITUDE;
+}
+
+double SensorSim::getMinAltitude() {
+    return MIN_ALTITUDE;
+}
+
+double SensorSim::getMaxAirspeed() {
+    return MAX_AIRSPEED;
+}
+
+double SensorSim::getMinAirspeed() {
+    return MIN_AIRSPEED;
+}
+
+
+
 void SensorSim::updateSensor() {
     // Create uniform distributions for altitude and airspeed changes
     std::uniform_real_distribution<double> uniform_dist(-0.1, 0.1);
