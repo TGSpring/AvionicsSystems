@@ -19,3 +19,14 @@
 11	967	7558215760807439	CMakeFiles/AvionicsSystems.dir/UserInterface.cpp.obj	7f5728acee569788
 15	991	7558215761027441	CMakeFiles/AvionicsSystems.dir/GPSsim.cpp.obj	ab3b6a8d381065db
 991	1589	7558215762087439	AvionicsSystems.exe	56342fa08d6386ca
+11	1095	7558253689848286	CMakeFiles/AvionicsSystems.dir/AvionicsSystems.cpp.obj	97138b105b3b774d
+11	18	0	clean	8c45b54705a541e8
+11	48	7558254322683253	CMakeFiles/AvionicsSystems.dir/FlightControl.cpp.obj	1a709d925d41df98
+17	268	7558254324873269	CMakeFiles/AvionicsSystems.dir/WeatherSim.cpp.obj	c6ec2409642d8ed3
+20	308	7558254325263259	CMakeFiles/AvionicsSystems.dir/ASHash.cpp.obj	db57614ea8ff0a48
+15	310	7558254325293256	CMakeFiles/AvionicsSystems.dir/SensorSim.cpp.obj	820a4ca18da3e24e
+7	880	7558254330963256	CMakeFiles/AvionicsSystems.dir/AvionicsSystems.cpp.obj	97138b105b3b774d
+13	965	7558254331797239	CMakeFiles/AvionicsSystems.dir/GPSsim.cpp.obj	ab3b6a8d381065db
+12	860	7558255624640993	CMakeFiles/AvionicsSystems.dir/AvionicsSystems.cpp.obj	97138b105b3b774d
+11	1144	7558286103951737	CMakeFiles/AvionicsSystems.dir/UserInterface.cpp.obj	7f5728acee569788
+1144	1628	7558286104934687	AvionicsSystems.exe	56342fa08d6386ca

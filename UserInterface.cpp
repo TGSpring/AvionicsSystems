@@ -6,18 +6,29 @@
 
 // Display the main menu to the user
 void UserInterface::displayMenu() const {
+    std::vector<std::pair<int, std::string>> menuItems = {
+        {1, "Log Data: "},
+        {2, "Get Valid Angle: "},
+        {3, "Display GPS Data: "},
+        {4, "Display Weather Data:"},
+        {5, "Run ML Analysis: "},
+        {6, "Export Data to Text: "},
+        {0, "Exit"}
+    };
+
     std::cout << "Welcome to the Avionics System Menu:\n";
-    std::cout << "1. Log Data\n";
-    std::cout << "2. Get Valid Angle\n";
-    std::cout << "3. Display GPS Data\n";
-    std::cout << "4. Display Weather Data\n";
-    std::cout << "5. Run ML Analysis\n";
-    std::cout << "6. Export Data to Text\n";
-    std::cout << "0. Exit\n";
+    for (const auto& item : menuItems) {
+        std::cout << item.first << ". " << item.second << "\n";
+    }
 }
 
+bool UserInterface::isValidChoice(int choice) const {
+    return choice >= 0 && choice <= 6;
+}
+
+
 // Handle the user input and call appropriate functions for each menu option
-void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
+UserInterface::UserInterface() {
     // Populate the menu options map with the corresponding function handlers
     menuOptions = {
         {1, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { logData(fc, ss, "log"); }},
@@ -36,23 +47,24 @@ void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, W
         {6, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { exportDataToTxt(ss, gps, weather); }},
         {0, [](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { std::cout << "Exiting...\n"; }}
     };
-
-    // Handle user input in a loop until they choose to exit
-    int choice;
-    do {
-        displayMenu();  // Show menu options
-        std::cout << "Enter your choice: ";
-        std::cin >> choice;
-
-        // Check if the user input is valid
-        if (menuOptions.find(choice) != menuOptions.end()) {
-            menuOptions[choice](fc, ss, gps, weather);  // Call the corresponding function
-        }
-        else {
-            std::cout << "Invalid choice. Please try again.\n";
-        }
-    } while (choice != 0);  // Exit the loop when the user chooses 0
 }
+
+    void UserInterface::handleInput(FlightControl & fc, SensorSim & ss, GPSsim & gps, WeatherSim & weather) {
+        int choice;
+        do {
+            displayMenu();  // Show menu options
+            std::cout << "Enter your choice: ";
+            std::cin >> choice;
+
+            // Check if the user input is valid
+            if (isValidChoice(choice)) {
+                menuOptions[choice](fc, ss, gps, weather);  // Call the corresponding function
+            }
+            else {
+                std::cout << "Invalid choice. Please try again.\n";
+            }
+        } while (choice != 0);  // Exit the loop when the user chooses 0
+    }
 
 // Helper function to validate user input within a range
 double UserInterface::getValidInput(const std::string& prompt, double min, double max) const {
@@ -77,11 +89,7 @@ double UserInterface::getValidInput(const std::string& prompt, double min, doubl
 
 // Logs sensor data using the provided sensor simulator
 void UserInterface::logData(const FlightControl& fc, const SensorSim& ss, const std::string& logType) const {
-    static ASHash sensorData; // Persistent across function calls
-    ss.logSensorData(sensorData); // Logs data into the hash table
-    std::cout << "Sensor data logged successfully.";
-    std::cout << "Current data:\n";
-    sensorData.display(); // Optional: Display logged data
+    std::cout << "Logging data (" << logType << ")...\n";
 }
 
 // Returns a valid angle input from the user
@@ -89,6 +97,11 @@ double UserInterface::getValidAngle(const std::string& prompt) const {
     double angle;
     std::cout << prompt;
     std::cin >> angle;
+
+    while (angle < 0 || angle > 360) {
+        std::cout << "Invalid angle. Please enter an angle between 0 and 360: ";
+        std::cin >> angle;
+    }
     return angle;
 }
 
