@@ -1,0 +1,39 @@
+{
+  "menuItems": [
+    {
+      "id": 1,
+      "label": "Log Data",
+      "function": "logData"
+    },
+    {
+      "id": 2,
+      "label": "Get Valid Angle",
+      "function": "getValidAngle"
+    },
+    {
+      "id": 3,
+      "label": "Display GPS Data",
+      "function": "displayGPSData"
+    },
+    {
+      "id": 4,
+      "label": "Display Weather Data",
+      "function": "displayWeatherData"
+    },
+    {
+      "id": 5,
+      "label": "Run ML Analysis",
+      "function": "runMLAnalysis"
+    },
+    {
+      "id": 6,
+      "label": "Export Data to Text",
+      "function": "exportDataToTxt"
+    },
+    {
+      "id": 0,
+      "label": "Exit",
+      "function": "exit"
+    }
+  ]
+}

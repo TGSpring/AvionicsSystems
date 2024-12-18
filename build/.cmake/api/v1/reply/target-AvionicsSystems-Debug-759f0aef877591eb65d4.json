@@ -36,7 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 13,
+				"line" : 16,
 				"parent" : 0
 			},
 			{
@@ -48,13 +48,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 23,
+				"line" : 27,
 				"parent" : 0
 			},
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 7,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
@@ -91,7 +91,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17"
 				}
 			],
 			"defines" : 
@@ -110,6 +110,14 @@
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "17"
+			},
 			"sourceIndexes" : 
 			[
 				0,

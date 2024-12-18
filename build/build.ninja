@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_AvionicsSystems: phony || .
 
 build CMakeFiles\AvionicsSystems.dir\AvionicsSystems.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\AvionicsSystems.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
@@ -60,7 +60,7 @@ build CMakeFiles\AvionicsSystems.dir\AvionicsSystems.cpp.obj: CXX_COMPILER__Avio
 
 build CMakeFiles\AvionicsSystems.dir\UserInterface.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\UserInterface.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
@@ -69,7 +69,7 @@ build CMakeFiles\AvionicsSystems.dir\UserInterface.cpp.obj: CXX_COMPILER__Avioni
 
 build CMakeFiles\AvionicsSystems.dir\FlightControl.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\FlightControl.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
@@ -78,7 +78,7 @@ build CMakeFiles\AvionicsSystems.dir\FlightControl.cpp.obj: CXX_COMPILER__Avioni
 
 build CMakeFiles\AvionicsSystems.dir\GPSsim.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\GPSsim.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
@@ -87,7 +87,7 @@ build CMakeFiles\AvionicsSystems.dir\GPSsim.cpp.obj: CXX_COMPILER__AvionicsSyste
 
 build CMakeFiles\AvionicsSystems.dir\SensorSim.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\SensorSim.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
@@ -96,7 +96,7 @@ build CMakeFiles\AvionicsSystems.dir\SensorSim.cpp.obj: CXX_COMPILER__AvionicsSy
 
 build CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\WeatherSim.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
@@ -105,7 +105,7 @@ build CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj: CXX_COMPILER__AvionicsS
 
 build CMakeFiles\AvionicsSystems.dir\ASHash.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\ASHash.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
-  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
   INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir

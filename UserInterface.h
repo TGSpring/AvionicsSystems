@@ -1,28 +1,28 @@
 #pragma once
 #include <string>
+#include <functional>  // For std::function
+#include <unordered_map>
 #include "FlightControl.h"
 #include "SensorSim.h"
 #include "GPSsim.h"
 #include "WeatherSim.h"
-#include <functional>  // For std::function
-#include <map>         // For std::map
 
 class UserInterface {
 public:
     // Constructor
     UserInterface();
 
+    // Load menu configuration from some external source (e.g., a config file)
+    void loadMenuConfig(const std::string& configPath);
+
     // Displays the menu options to the user
     void displayMenu() const;
 
+    // Retrieve the function handler based on the function name (returns a std::function)
+    std::function<void(FlightControl&, SensorSim&, GPSsim&, WeatherSim&)> getFunctionHandler(const std::string& functionName);
+
     // Handles user input, triggers corresponding menu actions
     void handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather);
-
-    // Gets user input for altitude
-    double getUserAltitude();
-
-    // Gets user input for airspeed
-    double getUserAirspeed();
 
     // Checks if the user's menu choice is valid
     bool isValidChoice(int choice) const;
@@ -50,5 +50,8 @@ private:
     double getValidInput(const std::string& prompt, double min, double max) const;
 
     // A map to associate menu options with function handlers
-    std::map<int, std::function<void(FlightControl&, SensorSim&, GPSsim&, WeatherSim&)>> menuOptions;
+    std::unordered_map<int, std::function<void(FlightControl&, SensorSim&, GPSsim&, WeatherSim&)>> menuOptions;
+
+    // A map of menu labels for display purposes
+    std::unordered_map<int, std::string> menuLabels;
 };

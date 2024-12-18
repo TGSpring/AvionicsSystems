@@ -9,15 +9,23 @@
 #include "GPSsim.h"
 #include "WeatherSim.h"
 
-int main()
-{
-    FlightControl _flightControl;
-    SensorSim _sensorSim;
-    UserInterface ui;
-    GPSsim gps;
-    WeatherSim weather;
+int main() {
+    try {
+        UserInterface ui;
+        FlightControl fc;
+        SensorSim ss;
+        GPSsim gps;
+        WeatherSim weather;
 
-    ui.handleInput(_flightControl, _sensorSim, gps, weather);
+        // Load menu configuration
+        ui.loadMenuConfig("menu_config.json");
+
+        // Start handling user input
+        ui.handleInput(fc, ss, gps, weather);
+    }
+    catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 
     return 0;
 }
