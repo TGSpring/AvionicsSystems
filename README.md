@@ -43,9 +43,14 @@ Before you can run the project, make sure you have the following installed:
     cmake --build .
     ```
 
+## Resources
+- [Avionics Project Plan on Notion] [Notion Document here](https://flying-glider-649.notion.site/Avionics-Simulation-Project-Plan-1607804656a980dcac30d59056945c6a)
+
 ### Running the Program
 
 After building the project, you can run the executable to simulate the avionics system:
 
 ```bash
 ./AvionicsSystems
+
+
