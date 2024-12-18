@@ -44,7 +44,7 @@ Before you can run the project, make sure you have the following installed:
     ```
 
 ## Resources
-- [Avionics Project Plan on Notion]([https://www.notion.so/your-notion-link-here](https://flying-glider-649.notion.site/Avionics-Simulation-Project-Plan-1607804656a980dcac30d59056945c6a)
+- [Avionics Project Plan on Notion] [Notion Document here](https://flying-glider-649.notion.site/Avionics-Simulation-Project-Plan-1607804656a980dcac30d59056945c6a)
 
 ### Running the Program
 
