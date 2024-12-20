@@ -11,30 +11,37 @@
 
 using json = nlohmann::json;
 
-//Load the menu configuration from a JSON file
+// Constructor for UserInterface class
+// Attempts to load the menu configuration from the JSON file
+UserInterface::UserInterface() {
+    loadMenuConfig("menu_config.json");
+}
+
+// Function to load menu configuration from a JSON file
 void UserInterface::loadMenuConfig(const std::string& configFilePath) {
-    //Clear existing menu options
+    // Clear existing menu options and labels
     menuOptions.clear();
     menuLabels.clear();
 
-    // Attempt to get the absolute path of the config file
+    // Create an absolute path for the configuration file
     std::filesystem::path configFileAbsolutePath(configFilePath);
 
-    // Check if the file exists before opening it
+    // Check if the configuration file exists
     if (!std::filesystem::exists(configFileAbsolutePath)) {
-        throw std::runtime_error("Configuration file does not exist: " + configFilePath);
+        std::cerr << "Configuration file does not exist: " << configFileAbsolutePath << "\n";
         loadDefaultMenu();
         return;
     }
 
-    // Open the config file
+    // Open the configuration file
     std::ifstream configFile(configFileAbsolutePath);
     if (!configFile.is_open()) {
-        throw std::runtime_error("Could not open configuration file: " + configFilePath);
+        std::cerr << "Could not open configuration file: " << configFileAbsolutePath << "\n";
         loadDefaultMenu();
         return;
     }
 
+    // Parse the JSON configuration
     json config;
     try {
         configFile >> config;
@@ -45,7 +52,7 @@ void UserInterface::loadMenuConfig(const std::string& configFilePath) {
         return;
     }
 
-    // Parse menu items
+    // Load menu items from the JSON configuration
     try {
         for (const auto& item : config["menuItems"]) {
             int id = item["id"];
@@ -53,18 +60,19 @@ void UserInterface::loadMenuConfig(const std::string& configFilePath) {
             std::string function = item["function"];
 
             menuLabels[id] = label;
-            menuOptions[id] = getFunctionHandler(function); // Map function name to handler
+            menuOptions[id] = getFunctionHandler(function);
         }
     }
     catch (const std::exception& e) {
-        std::cerr << "Error while parsing the menu items: " << e.what() << "\n";
+        std::cerr << "Error while parsing menu items: " << e.what() << "\n";
         loadDefaultMenu();
     }
 }
 
-//Load a default menu configuration in case the JSON file is missing or invalid
+// Function to load the default menu configuration
 void UserInterface::loadDefaultMenu() {
-    std::cerr << "Loading default menu configuration... \n";
+    std::cerr << "Loading default menu configuration...\n";
+
     menuLabels.insert({
         {1, "Log Data"},
         {2, "Get Valid Angle"},
@@ -73,13 +81,12 @@ void UserInterface::loadDefaultMenu() {
         {5, "Run ML Analysis"},
         {6, "Export Data to TXT"},
         {0, "Exit"}
-    });
+        });
 
-    // Insert default menu options with lambda functions
     menuOptions.insert({
         {1, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { logData(fc, ss, "log"); }},
         {2, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
-            double angle = getValidAngle("Enter angle: ");
+            double angle = getValidAngle("Enter angle: ", fc);
             std::cout << "Angle set to " << angle << " degrees.\n";
         }},
         {3, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { displayGPSData(gps); }},
@@ -90,7 +97,7 @@ void UserInterface::loadDefaultMenu() {
         });
 }
 
-
+// Function to get the appropriate function handler based on the function name
 std::function<void(FlightControl&, SensorSim&, GPSsim&, WeatherSim&)>
 UserInterface::getFunctionHandler(const std::string& functionName) {
     if (functionName == "logData") {
@@ -100,7 +107,7 @@ UserInterface::getFunctionHandler(const std::string& functionName) {
     }
     else if (functionName == "getValidAngle") {
         return [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
-            double angle = getValidAngle("Enter angle: ");
+            double angle = getValidAngle("Enter angle: ", fc);
             std::cout << "Angle set to " << angle << " degrees.\n";
             };
     }
@@ -124,6 +131,11 @@ UserInterface::getFunctionHandler(const std::string& functionName) {
             exportDataToTxt(ss, gps, weather);
             };
     }
+    else if (functionName == "displaySystemStatus") {
+        return [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
+            displaySystemStatus(fc, ss, gps, weather);
+            };
+    }
     else if (functionName == "exit") {
         return [](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
             };
@@ -133,6 +145,7 @@ UserInterface::getFunctionHandler(const std::string& functionName) {
     }
 }
 
+// Function to display the menu
 void UserInterface::displayMenu() const {
     std::cout << "Welcome to the Avionics System Menu:\n";
     for (const auto& [id, label] : menuLabels) {
@@ -140,29 +153,12 @@ void UserInterface::displayMenu() const {
     }
 }
 
+// Function to check if the user's choice is valid
 bool UserInterface::isValidChoice(int choice) const {
     return menuOptions.find(choice) != menuOptions.end();
 }
 
-UserInterface::UserInterface() {
-    // Initialize with default options if no JSON configuration is loaded
-    menuOptions = {
-        {1, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { logData(fc, ss, "log"); }},
-        {2, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
-            double altitude = getValidInput("Enter Altitude: ", SensorSim::getMinAltitude(), SensorSim::getMaxAltitude());
-            std::cout << "Altitude set to " << altitude << " meters.\n";
-        }},
-        {3, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
-            double airspeed = getValidInput("Enter Airspeed: ", SensorSim::getMinAirspeed(), SensorSim::getMaxAirspeed());
-            std::cout << "Airspeed set to: " << airspeed << " knots.\n";
-        }},
-        {4, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { displayWeatherData(weather); }},
-        {5, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { runMLAnalysis(ss, gps, weather, "input.csv", "output.csv"); }},
-        {6, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { exportDataToTxt(ss, gps, weather); }},
-        {0, [](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { std::cout << "Exiting...\n"; }}
-    };
-}
-
+// Function to handle user input
 void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
     int choice;
     while (true) {
@@ -171,9 +167,8 @@ void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, W
         std::cin >> choice;
 
         if (std::cin.fail()) {
-            //Clear the error flag on cin.
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize > ::max(), '\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Invalid input. Please enter a number.\n";
             continue;
         }
@@ -181,7 +176,6 @@ void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, W
         if (isValidChoice(choice)) {
             menuOptions[choice](fc, ss, gps, weather);
             if (choice == 0) {
-                //Exit the loop if the choice is 0 (for exiting)
                 std::cout << "Exiting...\n";
                 break;
             }
@@ -191,6 +185,8 @@ void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, W
         }
     }
 }
+
+// Function to get a valid input from the user within a specified range
 double UserInterface::getValidInput(const std::string& prompt, double min, double max) const {
     double value;
     while (true) {
@@ -208,36 +204,48 @@ double UserInterface::getValidInput(const std::string& prompt, double min, doubl
     }
 }
 
-double UserInterface::getValidAngle(const std::string& prompt) const {
+// Function to get a valid angle from the user
+double UserInterface::getValidAngle(const std::string& prompt, const FlightControl& fc) const {
     double angle;
     std::cout << prompt;
     std::cin >> angle;
 
-    while (std::cin.fail() || angle < 0 || angle > 360) {
+    while (std::cin.fail() || !fc.validateAngle(angle)) {
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "Invalid angle. Please enter an angle between 0 and 360: ";
+        std::cout << "Invalid angle. Please enter an angle between -360 and 360: ";
         std::cin >> angle;
     }
     return angle;
 }
 
+// Function to log data
 void UserInterface::logData(const FlightControl& fc, const SensorSim& ss, const std::string& logType) const {
-    std::cout << "Logging data (" << logType << ")...\n";
+    fc.logData(logType);
 }
 
+// Function to display GPS data
 void UserInterface::displayGPSData(const GPSsim& gps) const {
     std::cout << "Displaying GPS data...\n";
 }
 
+// Function to display weather data
 void UserInterface::displayWeatherData(const WeatherSim& weather) const {
     std::cout << "Displaying Weather data...\n";
 }
 
+// Function to run machine learning analysis
 void UserInterface::runMLAnalysis(const SensorSim& ss, const GPSsim& gps, const WeatherSim& weather, const std::string& inputFilePath, const std::string& outputFilePath) const {
     std::cout << "Running Machine Learning Analysis...\n";
 }
 
+// Function to export data to a text file
 void UserInterface::exportDataToTxt(const SensorSim& ss, const GPSsim& gps, const WeatherSim& weather) const {
     std::cout << "Exporting data to text file...\n";
+}
+
+// Function to display system status
+void UserInterface::displaySystemStatus(const FlightControl& fc, const SensorSim& ss, const GPSsim& gps, const WeatherSim& weather) const {
+    std::cout << "Displaying system status...\n";
+    // Add logic to display the system status here
 }

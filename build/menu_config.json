@@ -2,7 +2,7 @@
   "menuItems": [
     {
       "id": 1,
-      "label": "Log Data",
+      "label": "Log Data ",
       "function": "logData"
     },
     {
