@@ -54,4 +54,7 @@ private:
 
     // A map of menu labels for display purposes
     std::unordered_map<int, std::string> menuLabels;
+
+    //Load default menu config
+    void loadDefaultMenu();
 };

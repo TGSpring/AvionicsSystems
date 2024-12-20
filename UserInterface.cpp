@@ -10,24 +10,29 @@
 #include <filesystem>
 
 using json = nlohmann::json;
-std::ifstream configFile("C:\\Users\\tyler\\source\\repos\\newAS\\AvionicsSystems\\menu_config.json");
 
-
+//Load the menu configuration from a JSON file
 void UserInterface::loadMenuConfig(const std::string& configFilePath) {
+    //Clear existing menu options
+    menuOptions.clear();
+    menuLabels.clear();
 
+    // Attempt to get the absolute path of the config file
     std::filesystem::path configFileAbsolutePath(configFilePath);
-    std::cout << "Attempting to open config file at: "
-        << std::filesystem::absolute(configFileAbsolutePath) << std::endl;
 
     // Check if the file exists before opening it
     if (!std::filesystem::exists(configFileAbsolutePath)) {
         throw std::runtime_error("Configuration file does not exist: " + configFilePath);
+        loadDefaultMenu();
+        return;
     }
 
     // Open the config file
     std::ifstream configFile(configFileAbsolutePath);
     if (!configFile.is_open()) {
         throw std::runtime_error("Could not open configuration file: " + configFilePath);
+        loadDefaultMenu();
+        return;
     }
 
     json config;
@@ -35,12 +40,10 @@ void UserInterface::loadMenuConfig(const std::string& configFilePath) {
         configFile >> config;
     }
     catch (const json::parse_error& e) {
-        throw std::runtime_error("JSON parse error: " + std::string(e.what()));
+        std::cerr << "JSON parse error: " << e.what() << "\n";
+        loadDefaultMenu();
+        return;
     }
-
-    // Clear existing menu options
-    menuOptions.clear();
-    menuLabels.clear();
 
     // Parse menu items
     try {
@@ -54,9 +57,39 @@ void UserInterface::loadMenuConfig(const std::string& configFilePath) {
         }
     }
     catch (const std::exception& e) {
-        throw std::runtime_error("Error while parsing menu items: " + std::string(e.what()));
+        std::cerr << "Error while parsing the menu items: " << e.what() << "\n";
+        loadDefaultMenu();
     }
 }
+
+//Load a default menu configuration in case the JSON file is missing or invalid
+void UserInterface::loadDefaultMenu() {
+    std::cerr << "Loading default menu configuration... \n";
+    menuLabels.insert({
+        {1, "Log Data"},
+        {2, "Get Valid Angle"},
+        {3, "Display GPS Data"},
+        {4, "Display Weather Data"},
+        {5, "Run ML Analysis"},
+        {6, "Export Data to TXT"},
+        {0, "Exit"}
+    });
+
+    // Insert default menu options with lambda functions
+    menuOptions.insert({
+        {1, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { logData(fc, ss, "log"); }},
+        {2, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
+            double angle = getValidAngle("Enter angle: ");
+            std::cout << "Angle set to " << angle << " degrees.\n";
+        }},
+        {3, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { displayGPSData(gps); }},
+        {4, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { displayWeatherData(weather); }},
+        {5, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { runMLAnalysis(ss, gps, weather, "input.csv", "output.csv"); }},
+        {6, [this](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { exportDataToTxt(ss, gps, weather); }},
+        {0, [](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) { std::cout << "Exiting...\n"; }}
+        });
+}
+
 
 std::function<void(FlightControl&, SensorSim&, GPSsim&, WeatherSim&)>
 UserInterface::getFunctionHandler(const std::string& functionName) {
@@ -93,7 +126,6 @@ UserInterface::getFunctionHandler(const std::string& functionName) {
     }
     else if (functionName == "exit") {
         return [](FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
-            std::cout << "Exiting...\n";
             };
     }
     else {
@@ -133,27 +165,32 @@ UserInterface::UserInterface() {
 
 void UserInterface::handleInput(FlightControl& fc, SensorSim& ss, GPSsim& gps, WeatherSim& weather) {
     int choice;
-    do {
+    while (true) {
         displayMenu();
         std::cout << "Enter your choice: ";
         std::cin >> choice;
 
         if (std::cin.fail()) {
+            //Clear the error flag on cin.
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore(std::numeric_limits<std::streamsize > ::max(), '\n');
             std::cout << "Invalid input. Please enter a number.\n";
             continue;
         }
 
         if (isValidChoice(choice)) {
             menuOptions[choice](fc, ss, gps, weather);
+            if (choice == 0) {
+                //Exit the loop if the choice is 0 (for exiting)
+                std::cout << "Exiting...\n";
+                break;
+            }
         }
         else {
             std::cout << "Invalid choice. Please try again.\n";
         }
-    } while (choice != 0);
+    }
 }
-
 double UserInterface::getValidInput(const std::string& prompt, double min, double max) const {
     double value;
     while (true) {
