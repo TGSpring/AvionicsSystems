@@ -7,22 +7,18 @@ import os
 
 # Loading data from the log file
 def load_data(file_path):
-    data = pd.read_csv(file_path, sep=":", header=None)
-    data.columns = ['Metric', 'Value']
+    data = pd.read_csv(file_path)
     return data
 
 # Preprocess the data
 def preprocess_data(data):
     data = data.dropna()
-    data = data.copy()
-    data['Value'] = pd.to_numeric(data['Value'], errors='coerce')
-    data = data.dropna().reset_index(drop=True)
     return data
 
 # Training a model
 def train_model(data):
-    X = data.index.values.reshape(-1, 1)
-    y = data['Value'].values
+    X = data[['Altitude', 'AirSpeed', 'Orientation', 'Latitude', 'Longitude', 'Altitude_GPS']]
+    y = data['Target'] # Replace 'Target' with the actual target variable.
 
     # Ensure we have enough data
     if len(X) < 2:
@@ -48,8 +44,8 @@ def save_results(output_file, y_test, predictions):
 
 # Visualization of data
 def visualize_results(model, data):
-    X = data.index.values.reshape(-1, 1)
-    y = data['Value'].values
+    X = data[['Altitude', 'AirSpeed', 'Orientation', 'Latitude', 'Longitude', 'Altitude_GPS']]
+    y = data['Target'] # Replace 'Target' with the actual target variable.
     plt.scatter(X, y, color='blue')
     plt.plot(X, model.predict(X), color='red')
     plt.title('ML Model Results')

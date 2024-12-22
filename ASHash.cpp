@@ -1,5 +1,6 @@
 #include "ASHash.h"
 #include <iostream>
+#include <stdexcept>
 
 void ASHash::insert(const std::string& key, double value) {
 	data[key] = value;

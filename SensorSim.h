@@ -1,5 +1,6 @@
 #pragma once
 #include "ASHash.h"
+#include "GPSsim.h"
 #include <random> // For random number generation
 
 class SensorSim {
@@ -19,7 +20,7 @@ public:
 
 
     void updateSensor();
-    void logSensorData(ASHash& hashTable) const;
+    void logSensorData(ASHash& hashTable, const GPSsim& gpsSim) const;
 
 private:
     double altitude;

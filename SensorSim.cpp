@@ -1,9 +1,13 @@
 #include "SensorSim.h"
+#include "GPSsim.h"
 #include "ASHash.h"
 #include <cstdlib> // For rand()
 #include <cmath> // For fmod()
 #include <random> // For random number generation
 #include <iostream> // For debugging (if needed)
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 // Custom clamp function
 template <typename T>
@@ -56,8 +60,7 @@ double SensorSim::getMinAirspeed() {
     return MIN_AIRSPEED;
 }
 
-
-
+//Method to update sensor data
 void SensorSim::updateSensor() {
     // Create uniform distributions for altitude and airspeed changes
     std::uniform_real_distribution<double> uniform_dist(-0.1, 0.1);
@@ -77,8 +80,13 @@ void SensorSim::updateSensor() {
     orientation += orientation_change;
 }
 
-void SensorSim::logSensorData(ASHash& hashTable) const {
+void SensorSim::logSensorData(ASHash& hashTable, const GPSsim& gpsSim) const {
     hashTable.insert("Altitude", getAltitude());
     hashTable.insert("AirSpeed", getAirspeed());
     hashTable.insert("Orientation", getOrientation());
+
+    GPSdata gpsData = GPSsim().getCurrentData();
+    hashTable.insert("Latitude", gpsData.latitude);
+    hashTable.insert("Longitude", gpsData.longitude);
+    hashTable.insert("Altitude", gpsData.altitude);
 }
