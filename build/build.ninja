@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_AvionicsSystems: phony || .
 build CMakeFiles\AvionicsSystems.dir\AvionicsSystems.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\AvionicsSystems.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
@@ -61,7 +61,7 @@ build CMakeFiles\AvionicsSystems.dir\AvionicsSystems.cpp.obj: CXX_COMPILER__Avio
 build CMakeFiles\AvionicsSystems.dir\UserInterface.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\UserInterface.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
@@ -70,7 +70,7 @@ build CMakeFiles\AvionicsSystems.dir\UserInterface.cpp.obj: CXX_COMPILER__Avioni
 build CMakeFiles\AvionicsSystems.dir\FlightControl.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\FlightControl.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
@@ -79,7 +79,7 @@ build CMakeFiles\AvionicsSystems.dir\FlightControl.cpp.obj: CXX_COMPILER__Avioni
 build CMakeFiles\AvionicsSystems.dir\GPSsim.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\GPSsim.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
@@ -88,7 +88,7 @@ build CMakeFiles\AvionicsSystems.dir\GPSsim.cpp.obj: CXX_COMPILER__AvionicsSyste
 build CMakeFiles\AvionicsSystems.dir\SensorSim.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\SensorSim.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
@@ -97,7 +97,7 @@ build CMakeFiles\AvionicsSystems.dir\SensorSim.cpp.obj: CXX_COMPILER__AvionicsSy
 build CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\WeatherSim.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
@@ -106,7 +106,7 @@ build CMakeFiles\AvionicsSystems.dir\WeatherSim.cpp.obj: CXX_COMPILER__AvionicsS
 build CMakeFiles\AvionicsSystems.dir\ASHash.cpp.obj: CXX_COMPILER__AvionicsSystems_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\ASHash.cpp || cmake_object_order_depends_target_AvionicsSystems
   DEFINES = -DFMT_SHARED
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
-  INCLUDES = -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
   OBJECT_DIR = CMakeFiles\AvionicsSystems.dir
   OBJECT_FILE_DIR = CMakeFiles\AvionicsSystems.dir
   TARGET_COMPILE_PDB = CMakeFiles\AvionicsSystems.dir\
@@ -131,6 +131,118 @@ build AvionicsSystems.exe: CXX_EXECUTABLE_LINKER__AvionicsSystems_Debug CMakeFil
   TARGET_FILE = AvionicsSystems.exe
   TARGET_IMPLIB = AvionicsSystems.lib
   TARGET_PDB = AvionicsSystems.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TEST_ASHash
+
+
+#############################################
+# Order-only phony target for TEST_ASHash
+
+build cmake_object_order_depends_target_TEST_ASHash: phony || .
+
+build CMakeFiles\TEST_ASHash.dir\tests\TEST_ASHash.cpp.obj: CXX_COMPILER__TEST_ASHash_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\tests\TEST_ASHash.cpp || cmake_object_order_depends_target_TEST_ASHash
+  DEFINES = -DFMT_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\TEST_ASHash.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_ASHash.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_ASHash.dir\
+  TARGET_PDB = TEST_ASHash.pdb
+
+build CMakeFiles\TEST_ASHash.dir\ASHash.cpp.obj: CXX_COMPILER__TEST_ASHash_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\ASHash.cpp || cmake_object_order_depends_target_TEST_ASHash
+  DEFINES = -DFMT_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\TEST_ASHash.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_ASHash.dir
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_ASHash.dir\
+  TARGET_PDB = TEST_ASHash.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TEST_ASHash
+
+
+#############################################
+# Link the executable TEST_ASHash.exe
+
+build TEST_ASHash.exe: CXX_EXECUTABLE_LINKER__TEST_ASHash_Debug CMakeFiles\TEST_ASHash.dir\tests\TEST_ASHash.cpp.obj CMakeFiles\TEST_ASHash.dir\ASHash.cpp.obj | vcpkg_installed\x64-windows\debug\lib\fmtd.lib vcpkg_installed\x64-windows\debug\lib\zlibd.lib vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\fmtd.lib  vcpkg_installed\x64-windows\debug\lib\zlibd.lib  vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\TEST_ASHash.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tyler\source\repos\newAS\AvionicsSystems\build && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/TEST_ASHash.exe -installedDir C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/debug/bin -OutVariable out"
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_ASHash.dir\
+  TARGET_FILE = TEST_ASHash.exe
+  TARGET_IMPLIB = TEST_ASHash.lib
+  TARGET_PDB = TEST_ASHash.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TEST_SensorSim
+
+
+#############################################
+# Order-only phony target for TEST_SensorSim
+
+build cmake_object_order_depends_target_TEST_SensorSim: phony || .
+
+build CMakeFiles\TEST_SensorSim.dir\tests\TEST_SensorSim.cpp.obj: CXX_COMPILER__TEST_SensorSim_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\tests\TEST_SensorSim.cpp || cmake_object_order_depends_target_TEST_SensorSim
+  DEFINES = -DFMT_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\TEST_SensorSim.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_SensorSim.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_SensorSim.dir\
+  TARGET_PDB = TEST_SensorSim.pdb
+
+build CMakeFiles\TEST_SensorSim.dir\SensorSim.cpp.obj: CXX_COMPILER__TEST_SensorSim_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\SensorSim.cpp || cmake_object_order_depends_target_TEST_SensorSim
+  DEFINES = -DFMT_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\TEST_SensorSim.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_SensorSim.dir
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_SensorSim.dir\
+  TARGET_PDB = TEST_SensorSim.pdb
+
+build CMakeFiles\TEST_SensorSim.dir\GPSsim.cpp.obj: CXX_COMPILER__TEST_SensorSim_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\GPSsim.cpp || cmake_object_order_depends_target_TEST_SensorSim
+  DEFINES = -DFMT_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\TEST_SensorSim.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_SensorSim.dir
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_SensorSim.dir\
+  TARGET_PDB = TEST_SensorSim.pdb
+
+build CMakeFiles\TEST_SensorSim.dir\ASHash.cpp.obj: CXX_COMPILER__TEST_SensorSim_unscanned_Debug C$:\Users\tyler\source\repos\newAS\AvionicsSystems\ASHash.cpp || cmake_object_order_depends_target_TEST_SensorSim
+  DEFINES = -DFMT_SHARED
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17
+  INCLUDES = -IC:\Users\tyler\source\repos\newAS\AvionicsSystems -external:IC:\Users\tyler\source\repos\newAS\AvionicsSystems\build\vcpkg_installed\x64-windows\include -external:W0
+  OBJECT_DIR = CMakeFiles\TEST_SensorSim.dir
+  OBJECT_FILE_DIR = CMakeFiles\TEST_SensorSim.dir
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_SensorSim.dir\
+  TARGET_PDB = TEST_SensorSim.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TEST_SensorSim
+
+
+#############################################
+# Link the executable TEST_SensorSim.exe
+
+build TEST_SensorSim.exe: CXX_EXECUTABLE_LINKER__TEST_SensorSim_Debug CMakeFiles\TEST_SensorSim.dir\tests\TEST_SensorSim.cpp.obj CMakeFiles\TEST_SensorSim.dir\SensorSim.cpp.obj CMakeFiles\TEST_SensorSim.dir\GPSsim.cpp.obj CMakeFiles\TEST_SensorSim.dir\ASHash.cpp.obj | vcpkg_installed\x64-windows\debug\lib\fmtd.lib vcpkg_installed\x64-windows\debug\lib\zlibd.lib vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = vcpkg_installed\x64-windows\debug\lib\fmtd.lib  vcpkg_installed\x64-windows\debug\lib\zlibd.lib  vcpkg_installed\x64-windows\debug\lib\libcurl-d.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\TEST_SensorSim.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tyler\source\repos\newAS\AvionicsSystems\build && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/TEST_SensorSim.exe -installedDir C:/Users/tyler/source/repos/newAS/AvionicsSystems/build/vcpkg_installed/x64-windows/debug/bin -OutVariable out"
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\TEST_SensorSim.dir\
+  TARGET_FILE = TEST_SensorSim.exe
+  TARGET_IMPLIB = TEST_SensorSim.lib
+  TARGET_PDB = TEST_SensorSim.pdb
 
 
 #############################################
@@ -160,6 +272,10 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 build AvionicsSystems: phony AvionicsSystems.exe
 
+build TEST_ASHash: phony TEST_ASHash.exe
+
+build TEST_SensorSim: phony TEST_SensorSim.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -168,7 +284,7 @@ build AvionicsSystems: phony AvionicsSystems.exe
 #############################################
 # Folder: C:/Users/tyler/source/repos/newAS/AvionicsSystems/build
 
-build all: phony AvionicsSystems.exe
+build all: phony AvionicsSystems.exe TEST_ASHash.exe TEST_SensorSim.exe
 
 # =============================================================================
 # Built-in targets

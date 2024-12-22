@@ -15,7 +15,9 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -30,7 +32,9 @@
 					"name" : "AvionicsSystems",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -39,8 +43,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "AvionicsSystems::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-AvionicsSystems-Debug-759f0aef877591eb65d4.json",
+					"jsonFile" : "target-AvionicsSystems-Debug-70d56a172d850e900c17.json",
 					"name" : "AvionicsSystems",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TEST_ASHash::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TEST_ASHash-Debug-dd4d751e18ad9b42f52e.json",
+					"name" : "TEST_ASHash",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TEST_SensorSim::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TEST_SensorSim-Debug-ba9a77f1e480bcb8c5c7.json",
+					"name" : "TEST_SensorSim",
 					"projectIndex" : 0
 				}
 			]
